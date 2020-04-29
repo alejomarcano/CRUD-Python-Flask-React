@@ -1,23 +1,22 @@
-import React from 'react';
-import {BrowserRouter as Router,Switch, Route} from 'react-router-dom'
-import {About} from './components/About'
-import {Users} from './components/Users'
-import {Navbar} from './components/Navbar'
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+import { Navbar } from "./components/Navbar";
+import { About } from "./components/About";
+import { Users } from "./components/Users";
 
 function App() {
   return (
-      <Router>
-        <Navbar/>
-        <div className="container p-3"></div>
-        <div>
-          <Switch>
-            <Route path="/about" component={About}/>
-            <Route path="/" component={Users}/>
+    <Router>
+      <Navbar />
 
-          </Switch>
-        </div>
-      </Router>
-
+      <div className="container p-4">
+        <Switch>
+          <Route path="/about" component={About} />
+          <Route path="/" component={Users} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
